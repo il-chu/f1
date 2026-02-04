@@ -75,7 +75,7 @@ def render_gp_card(row):
 df_sorted = df.sort_values(
     by=sort_col,
     ascending=ascending
-)
+).reset_index(drop=True)
 
 cols = st.columns(3)
 
