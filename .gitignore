@@ -2,7 +2,6 @@
 *.pyc
 __pycache__/
 .env
-*.csv
 *.parquet
 .ipynb_checkpoints/
 .DS_Store
