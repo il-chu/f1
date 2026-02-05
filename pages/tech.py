@@ -377,8 +377,9 @@ def plot_strategy_outcome(row):
 
     flows = flows.merge(results, on="driver_number", how="inner")
     N = len(flows)
-    flows["position"] = results["position"].fillna(N + 1)
+    flows["position"] = flows["position"].fillna(N + 1)
     flows["Strategy"] = flows["Strategy"].apply(tuple)
+
 
     mu = flows["position"].mean()
     between_var = 0.0
